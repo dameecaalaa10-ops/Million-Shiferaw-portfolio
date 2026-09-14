@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:#f7f9fc;color:#18212f}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e7eaf0}
+.navbar{min-height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.35rem;font-weight:800}
+.logo span{color:#2563eb}
+.navlinks{display:flex;gap:25px;list-style:none}
+.navlinks a:hover{color:#2563eb}
+.hero{padding:90px 0 75px;background:linear-gradient(135deg,#eef5ff,#fff)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:50px;align-items:center}
+.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:7px 13px;border-radius:999px;font-weight:700;font-size:.9rem;margin-bottom:18px}
+h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin-bottom:20px}
+.hero h1 span{color:#2563eb}
+.hero p{font-size:1.1rem;color:#526071;max-width:650px}
+.buttons{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:10px;font-weight:700;border:1px solid #2563eb;display:inline-block}
+.primary{background:#2563eb;color:#fff}
+.secondary{color:#2563eb;background:#fff}
+.profile-card{background:#fff;border-radius:24px;padding:35px;box-shadow:0 18px 50px #1e3a8a18;text-align:center}
+.avatar{width:150px;height:150px;margin:auto auto 18px;border-radius:50%;display:grid;place-items:center;background:#dbeafe;color:#2563eb;font-size:3.5rem;font-weight:800}
+section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{font-size:2.2rem;margin-bottom:8px}
+.section-title p{color:#687486}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.card{background:#fff;padding:28px;border-radius:18px;border:1px solid #e8ebf0}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.skill{background:#eef2ff;color:#3046a8;padding:8px 13px;border-radius:999px;font-weight:600}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.project h3{margin-bottom:8px}
+.project p{color:#647184;margin-bottom:18px}
+.project a{color:#2563eb;font-weight:700}
+.contact{text-align:center;background:#111827;color:#fff}
+.contact p{color:#cbd5e1;max-width:600px;margin:10px auto 25px}
+footer{text-align:center;padding:25px;color:#6b7280;background:#fff}
+@media(max-width:760px){
+.navlinks{gap:12px;font-size:.9rem}
+.hero-grid,.about,.projects{grid-template-columns:1fr}
+.hero{padding-top:60px}
+.profile-card{max-width:360px;margin:auto}
+}
+@media(max-width:480px){
+.navlinks li:nth-child(2){display:none}
+.navlinks{gap:10px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navbar">
+    <a class="logo" href="#home">My<span>Portfolio</span></a>
+    <ul class="navlinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">Student • Future Tech Entrepreneur</span>
+      <h1>Hello, I'm <span>Million</span>.</h1>
+      <p>I’m a technology-minded student interested in software, AI, electronics, and building useful solutions. This portfolio is a place to share my journey, projects, and goals.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">View My Projects</a>
+        <a class="btn secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="profile-card">
+      <div class="avatar">D</div>
+      <h2>Million Shiferaw</h2>
+      <p>Technology & Engineering Enthusiast</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>A little about who I am and what I want to build.</p>
+    </div>
+    <div class="about">
+      <div class="card">
+        <h3>My Story</h3>
+        <p>I have been curious about technology from a young age, especially how electronic devices work and how they can be repaired or improved. I enjoy learning through practice and solving problems step by step.</p>
+        <p style="margin-top:14px">My long-term goal is to develop strong technical skills and eventually build a technology-focused business that creates useful products and opportunities.</p>
+      </div>
+      <div class="card">
+        <h3>Skills & Interests</h3>
+        <div class="skills">
+          <span class="skill">Problem Solving</span>
+          <span class="skill">Mathematics</span>
+          <span class="skill">Physics</span>
+          <span class="skill">Electronics</span>
+          <span class="skill">Programming</span>
+          <span class="skill">AI</span>
+          <span class="skill">Technology</span>
+          <span class="skill">Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:#fff">
+  <div class="container">
+    <div class="section-title">
+      <h2>My Projects</h2>
+      <p>Some projects and experiences I want to showcase.</p>
+    </div>
+    <div class="projects">
+      <div class="card project">
+        <h3>Smart Agriculture Robot</h3>
+        <p>An Arduino-based project designed to monitor soil conditions and control watering, with additional automated functions.</p>
+        <a href="#contact">Learn more →</a>
+      </div>
+      <div class="card project">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal website built to present my skills, projects, education, and future goals.</p>
+        <a href="#contact">Learn more →</a>
+      </div>
+      <div class="card project">
+        <h3>Future AI Projects</h3>
+        <p>I’m interested in learning AI and software development and turning that knowledge into practical projects.</p>
+        <a href="#contact">Coming soon →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Let's Connect</h2>
+      <p>I'm always interested in learning, building, and connecting with people in technology.</p>
+    </div>
+    <a class="btn primary" href="mailto:your-email@example.com">Email Me</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Million Shiferaw. Built with HTML & CSS.</footer>
+</body>
+</html>

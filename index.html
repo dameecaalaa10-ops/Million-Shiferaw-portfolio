@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Million Shiferaw | Portfolio</title>
 
 <style>
+
+/* ================= GENERAL ================= */
 
 *{
   box-sizing:border-box;
@@ -110,7 +114,7 @@ nav{
 }
 
 
-/* DARK MODE BUTTON */
+/* ================= DARK MODE ================= */
 
 .theme-btn{
   border:none;
@@ -202,7 +206,7 @@ h1{
 }
 
 
-/* PROFILE */
+/* ================= PROFILE ================= */
 
 .profile-card{
   background:var(--card);
@@ -271,7 +275,7 @@ section{
 }
 
 
-/* SKILLS */
+/* ================= SKILLS ================= */
 
 .skills{
   display:flex;
@@ -322,15 +326,17 @@ section{
 .certificates{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:22px;
+  gap:25px;
 }
 
 .certificate{
   background:var(--card);
-  padding:28px;
+  padding:20px;
   border-radius:18px;
   border:1px solid var(--border);
   transition:.3s;
+  text-align:center;
+  overflow:hidden;
 }
 
 .certificate:hover{
@@ -338,9 +344,19 @@ section{
   box-shadow:0 15px 35px #00000015;
 }
 
-.certificate-icon{
-  font-size:2.3rem;
-  margin-bottom:12px;
+.certificate img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;
+  margin-bottom:18px;
+  border:1px solid var(--border);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.certificate img:hover{
+  transform:scale(1.02);
 }
 
 .certificate h3{
@@ -349,7 +365,7 @@ section{
 
 .certificate p{
   color:var(--secondary);
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .certificate .btn{
@@ -484,10 +500,14 @@ footer{
     text-align:center;
   }
 
+  .certificate{
+    padding:14px;
+  }
+
 }
 
 
-/* VERY SMALL PHONES */
+/* ================= VERY SMALL PHONES ================= */
 
 @media(max-width:390px){
 
@@ -506,6 +526,7 @@ footer{
 }
 
 </style>
+
 </head>
 
 
@@ -852,23 +873,26 @@ footer{
 
       <div class="certificate reveal">
 
-        <div class="certificate-icon">
-          💻
-        </div>
+        <img
+          src="documents/programming-fundamentals.png"
+          alt="Programming Fundamentals Certificate"
+          onclick="openCertificate(this.src)">
 
         <h3>
           Programming Fundamentals
         </h3>
 
         <p>
-          Certificate of learning in programming fundamentals.
+          Programming fundamentals learning certificate.
         </p>
 
         <a
           class="btn primary"
-          href="documents/programming-fundamentals.pdf"
+          href="documents/programming-fundamentals.png"
           target="_blank">
-          View Certificate
+
+          View Full Certificate
+
         </a>
 
       </div>
@@ -879,9 +903,10 @@ footer{
 
       <div class="certificate reveal">
 
-        <div class="certificate-icon">
-          📊
-        </div>
+        <img
+          src="documents/data-analysis-fundamentals.png"
+          alt="Data Analysis Fundamentals Certificate"
+          onclick="openCertificate(this.src)">
 
         <h3>
           Data Analysis Fundamentals
@@ -893,9 +918,11 @@ footer{
 
         <a
           class="btn primary"
-          href="documents/data-analysis-fundamentals.pdf"
+          href="documents/data-analysis-fundamentals.png"
           target="_blank">
-          View Certificate
+
+          View Full Certificate
+
         </a>
 
       </div>
@@ -906,9 +933,10 @@ footer{
 
       <div class="certificate reveal">
 
-        <div class="certificate-icon">
-          📱
-        </div>
+        <img
+          src="documents/android-developer-fundamentals.png"
+          alt="Android Developer Fundamentals Certificate"
+          onclick="openCertificate(this.src)">
 
         <h3>
           Android Developer Fundamentals
@@ -920,9 +948,11 @@ footer{
 
         <a
           class="btn primary"
-          href="documents/android-developer-fundamentals.pdf"
+          href="documents/android-developer-fundamentals.png"
           target="_blank">
-          View Certificate
+
+          View Full Certificate
+
         </a>
 
       </div>
@@ -933,9 +963,10 @@ footer{
 
       <div class="certificate reveal">
 
-        <div class="certificate-icon">
-          🤖
-        </div>
+        <img
+          src="documents/artificial-intelligence-fundamentals.png"
+          alt="Artificial Intelligence Fundamentals Certificate"
+          onclick="openCertificate(this.src)">
 
         <h3>
           Artificial Intelligence Fundamentals
@@ -947,9 +978,11 @@ footer{
 
         <a
           class="btn primary"
-          href="documents/artificial-intelligence-fundamentals.pdf"
+          href="documents/artificial-intelligence-fundamentals.png"
           target="_blank">
-          View Certificate
+
+          View Full Certificate
+
         </a>
 
       </div>
@@ -1053,7 +1086,7 @@ themeBtn.addEventListener("click", function(){
 });
 
 
-/* REMEMBER THEME */
+/* ================= REMEMBER THEME ================= */
 
 if(
   localStorage.getItem("theme")
@@ -1104,8 +1137,21 @@ revealElements.forEach(function(element){
 
 });
 
+
+/* ================= CERTIFICATE IMAGE ================= */
+
+function openCertificate(imageSource){
+
+  window.open(
+    imageSource,
+    "_blank"
+  );
+
+}
+
 </script>
 
 
 </body>
-  </html>
+
+</html>
